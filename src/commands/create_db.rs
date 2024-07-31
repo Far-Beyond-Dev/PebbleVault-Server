@@ -1,8 +1,6 @@
-use PebbleVault;
-use ffi;
+use PebbleVault;  // Note: use lowercase 'pebble_vault'
 
-pub fn execute() {
-  let db = ffi::CreateDB();
+pub fn main() {
   let db = PebbleVault::create_db();
   println!("DB created: {:?}", db);
 }

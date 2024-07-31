@@ -1,0 +1,27 @@
+#V2
+djkshalk
+exitr
+greet Tuafo
+create_db
+create_db 1
+create_db
+exit
+help
+greet koolaid
+create_db
+exit
+create_db
+exit
+create_db
+exit
+create_db
+v
+create_db
+v
+create_db
+create_dbcreate_db
+create_db
+help
+greetgr
+greet
+exit
