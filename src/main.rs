@@ -8,6 +8,7 @@ use std::time::Instant;
 use colored::*;
 use chrono::Local;
 
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     
@@ -19,6 +20,23 @@ fn main() {
 }
 
 fn run_interactive_cli() {
+    let ascii_art = r#"
+          /\
+         /**\
+        /****\   /\
+       /      \ /**\
+      /  /\    /    \        /\    /\  /\      /\            /\/\/\  /\
+     /  /  \  /      \      /  \/\/  \/  \  /\/  \/\  /\  /\/ / /  \/  \
+    /  /    \/ /\     \    /    \ \  /    \/ /   /  \/  \/  \  /    \   \
+   /  /      \/  \/\   \  /      \    /   /    \
+__/__/_______/___/__\___\__________________________________________________        
+"#;
+
+println!("{}", ascii_art);
+println!("{}", "                          Welcome to PebbleVault CLI 🗿".green().bold());
+println!("{}", "                                  Ver: 0.1.0-A".blue().bold());
+
+
     let mut rl = DefaultEditor::new().unwrap();
     if rl.load_history("history.txt").is_err() {
         println!("No previous history.");
@@ -26,11 +44,12 @@ fn run_interactive_cli() {
 
     let mut commands: HashMap<String, Box<dyn Fn(&[String])>> = HashMap::new();
     commands.insert("create_db".to_string(), Box::new(execute_command));
-    commands.insert("greet".to_string(), Box::new(execute_command));
     commands.insert("close_db".to_string(), Box::new(execute_command));
+    commands.insert("set_object".to_string(), Box::new(execute_command));
+    commands.insert("get_object".to_string(), Box::new(execute_command));
+    commands.insert("greet".to_string(), Box::new(execute_command));
     commands.insert("use_db".to_string(), Box::new(execute_command));
 
-    println!("{}", "Welcome to PebbleVault CLI 🗿".green().bold());
     println!("Type 'help' for a list of commands or 'exit' to quit.");
 
     // Get the current Unix user
@@ -76,7 +95,7 @@ fn run_interactive_cli() {
                                 let duration = start.elapsed();
                                 println!("{} {:.2?}", "Command executed in".italic(), duration);
                             } else {
-                                println!("{} Type 'help' for a list of commands.", "Unknown command! ❌".red());
+                                println!("{}: {} Type 'help' for a list of commands.", "Unknown command! ❌".red(), cmd.to_string());
                             }
                         }
                     }
@@ -128,10 +147,80 @@ fn execute_command(args: &[String]) {
     }
 }
 
+///////////////////////////////////////////////////////////
+//                   Help command UI                     //
+//  Everything in this section is related to generating  //
+//  the help UI                                          //
+///////////////////////////////////////////////////////////
+
 fn print_help(commands: &HashMap<String, Box<dyn Fn(&[String])>>) {
-    println!("{}", "Available commands:".yellow().underline());
+    let box_width = 76; // Width of the box
+    let border = "═".repeat(box_width - 2);
+    let top_border = format!("╭{}╮", border);
+    let bottom_border = format!("╰{}╯", border);
+
+    // Print the top border of the box
+    println!("{}", top_border.yellow().bold());
+
+    // Print the title inside the box
+    println!("│ {} │", "Available commands:".yellow().underline().pad_to_width_with_alignment(box_width - 5, Alignment::Center));
+    
+    // Print each command inside the box
     for cmd in commands.keys() {
-        println!("  {} {}", "•".yellow(), cmd);
+        println!("│ {} {} │", "•".yellow(), cmd.pad_to_width(box_width - 6));
     }
-    println!("{}", "Type 'exit' to quit the program.".italic());
+
+    // Print the exit message inside the box
+    println!("│ {} │", "Type 'exit' to quit the program.".italic().pad_to_width_with_alignment(box_width - 3, Alignment::Center));
+
+    // Print the bottom border of the box
+    println!("{}", bottom_border.yellow().bold());
+}
+
+// Extension trait for padding strings to a specific width with alignment
+trait PadToWidth {
+    fn pad_to_width(&self, width: usize) -> String;
+    fn pad_to_width_with_alignment(&self, width: usize, alignment: Alignment) -> String;
+}
+
+impl PadToWidth for str {
+    fn pad_to_width(&self, width: usize) -> String {
+        let len = self.chars().count();
+        if len >= width {
+            self.to_string()
+        } else {
+            let padding = " ".repeat(width - len);
+            format!("{}{}", self, padding)
+        }
+    }
+
+    fn pad_to_width_with_alignment(&self, width: usize, alignment: Alignment) -> String {
+        match alignment {
+            Alignment::Center => {
+                let len = self.chars().count();
+                if len >= width {
+                    self.to_string()
+                } else {
+                    let padding = " ".repeat((width - len) / 2);
+                    format!("{}{}{}", padding, self, padding)
+                }
+            },
+            Alignment::Left => self.pad_to_width(width),
+            Alignment::Right => {
+                let len = self.chars().count();
+                if len >= width {
+                    self.to_string()
+                } else {
+                    let padding = " ".repeat(width - len);
+                    format!("{}{}", padding, self)
+                }
+            },
+        }
+    }
+}
+
+enum Alignment {
+    Left,
+    Center,
+    Right,
 }

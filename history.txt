@@ -1,15 +1,4 @@
 #V2
-djkshalk
-exitr
-greet Tuafo
-create_db
-create_db 1
-create_db
-exit
-help
-greet koolaid
-create_db
-exit
 create_db
 exit
 create_db
@@ -55,3 +44,58 @@ creat_db
 create_db
 use_db
 use_db test
+close_db 824635441152
+create_db
+close_db 824634982400
+close_db 82463498240
+close_db 8246349
+exit
+close_db 8246349
+exit
+close_db 8246349
+help
+exit
+help
+create_db
+set_object key1 r#"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"#
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+create_db
+set_object 824635441152 key1 r#"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"#
+set_object 824635441152 key1 {"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}
+exit
+help
+close_db 824635441152
+create_db
+set_object 824635441152 key1 {"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}
+set_object 824635441152 key1 r#"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"#
+set_object 824635441152 key1 #"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"
+help
+set_object 824635441152 key1 #"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+exit
+help
+use_db           /\\\n         /**\\\n        /****\\   /\\\n       /      \\ /**\\\n      /  /\\    /    \\        /\\    /\\  /\\      /\\            /\\/\\/\\  /\\\n     /  /  \\  /      \\      /  \\/\\/  \\/  \\  /\\/  \\/\\  /\\  /\\/ / /  \\/  \\\n    /  /    \\/ /\\     \\    /    \\ \\  /    \\/ /   /  \\/  \\/  \\  /    \\   \\\n   /  /      \\/  \\/\\   \\  /      \\    /   /    \\\n__/__/_______/___/__\\___\\__________________________________________________
+exit

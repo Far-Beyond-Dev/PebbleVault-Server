@@ -23,6 +23,14 @@ name = "close_db"
 path = "src/commands/close_db.rs"
 
 [[bin]]
+name = "set_object"
+path = "src/commands/set_object.rs"
+
+[[bin]]
+name = "get_object"
+path = "src/commands/get_object.rs"
+
+[[bin]]
 name = "greet"
 path = "src/commands/greet.rs"
 
