@@ -1,0 +1,1 @@
+sudo apt-get install -y clang libsqlite3-dev libssl-dev golang curl libclang-dev gcc-multilib
