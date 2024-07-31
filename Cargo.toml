@@ -4,4 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-PebbleVault = "0.2.0"
+PebbleVault = { path = "./PebbleVault" }
+colored = "2.1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+text_io = "0.1"
