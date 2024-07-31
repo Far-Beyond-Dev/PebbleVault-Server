@@ -19,6 +19,10 @@ name = "create_db"
 path = "src/commands/create_db.rs"
 
 [[bin]]
+name = "close_db"
+path = "src/commands/close_db.rs"
+
+[[bin]]
 name = "greet"
 path = "src/commands/greet.rs"
 

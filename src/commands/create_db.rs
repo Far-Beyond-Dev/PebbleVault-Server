@@ -1,4 +1,4 @@
-use PebbleVault;  // Note: use lowercase 'pebble_vault'
+use PebbleVault;
 
 pub fn main() {
   let db = PebbleVault::create_db();

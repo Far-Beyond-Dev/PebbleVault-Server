@@ -27,6 +27,8 @@ fn run_interactive_cli() {
     let mut commands: HashMap<String, Box<dyn Fn(&[String])>> = HashMap::new();
     commands.insert("create_db".to_string(), Box::new(execute_command));
     commands.insert("greet".to_string(), Box::new(execute_command));
+    commands.insert("close_db".to_string(), Box::new(execute_command));
+    commands.insert("use_db".to_string(), Box::new(execute_command));
 
     println!("{}", "Welcome to PebbleVault CLI 🗿".green().bold());
     println!("Type 'help' for a list of commands or 'exit' to quit.");

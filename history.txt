@@ -25,3 +25,33 @@ help
 greetgr
 greet
 exit
+greet William
+help
+exit
+help
+create_db Hi
+use_db_ hi
+use_db hi
+use_db Tuafo
+help
+close_db
+exitr
+close_db 
+create_db
+close_db 824635441152
+eexxitt
+exit
+close_db 824635441152
+help
+close_db 824635441152
+cargo clean
+exit
+close_db 824635441152
+exit
+close_db 824635441152
+create_db
+help
+creat_db
+create_db
+use_db
+use_db test
