@@ -7,6 +7,7 @@ use std::path::Path;
 use std::time::Instant;
 use colored::*;
 use chrono::Local;
+use PebbleVault;
 
 
 fn main() {
@@ -44,6 +45,7 @@ println!("{}", "                                  Ver: 0.1.0-A".blue().bold());
 
     let mut commands: HashMap<String, Box<dyn Fn(&[String])>> = HashMap::new();
     commands.insert("create_db".to_string(), Box::new(execute_command));
+    commands.insert("history".to_string(), Box::new(execute_command));
     commands.insert("close_db".to_string(), Box::new(execute_command));
     commands.insert("set_object".to_string(), Box::new(execute_command));
     commands.insert("get_object".to_string(), Box::new(execute_command));
@@ -51,6 +53,7 @@ println!("{}", "                                  Ver: 0.1.0-A".blue().bold());
     commands.insert("use_db".to_string(), Box::new(execute_command));
 
     println!("Type 'help' for a list of commands or 'exit' to quit.");
+    PebbleVault::main();
 
     // Get the current Unix user
     let username = env::var("USER").unwrap_or_else(|_| "unknown".to_string());
@@ -128,6 +131,7 @@ fn execute_command(args: &[String]) {
     let current_exe = env::current_exe().unwrap();
     let bin_dir = current_exe.parent().unwrap();
     let command_path = bin_dir.join(command_name);
+    println!("{}", command_path.display());
 
     if !command_path.exists() {
         println!("{}: {}", "Command not found ❌".red(), command_name);

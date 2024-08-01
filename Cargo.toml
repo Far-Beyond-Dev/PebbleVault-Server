@@ -9,6 +9,7 @@ rustyline = "14.0.0"
 PebbleVault = { path = "./PebbleVault" }
 colored = "2.0.0"
 chrono = "0.4.19"
+lazy_static = "1.5.0"
 
 [[bin]]
 name = "main"
@@ -33,5 +34,9 @@ path = "src/commands/get_object.rs"
 [[bin]]
 name = "greet"
 path = "src/commands/greet.rs"
+
+[[bin]]
+name = "history"
+path = "src/commands/history.rs"
 
 # Add more [[bin]] entries for each command you want to include

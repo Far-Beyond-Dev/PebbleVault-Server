@@ -1,35 +1,4 @@
 #V2
-create_db
-exit
-create_db
-exit
-create_db
-v
-create_db
-v
-create_db
-create_dbcreate_db
-create_db
-help
-greetgr
-greet
-exit
-greet William
-help
-exit
-help
-create_db Hi
-use_db_ hi
-use_db hi
-use_db Tuafo
-help
-close_db
-exitr
-close_db 
-create_db
-close_db 824635441152
-eexxitt
-exit
 close_db 824635441152
 help
 close_db 824635441152
@@ -98,4 +67,35 @@ help
 exit
 help
 use_db           /\\\n         /**\\\n        /****\\   /\\\n       /      \\ /**\\\n      /  /\\    /    \\        /\\    /\\  /\\      /\\            /\\/\\/\\  /\\\n     /  /  \\  /      \\      /  \\/\\/  \\/  \\  /\\/  \\/\\  /\\  /\\/ / /  \\/  \\\n    /  /    \\/ /\\     \\    /    \\ \\  /    \\/ /   /  \\/  \\/  \\  /    \\   \\\n   /  /      \\/  \\/\\   \\  /      \\    /   /    \\\n__/__/_______/___/__\\___\\__________________________________________________
+exit
+use_db /\\\\\\n         /**\\\\\\n        /****\\\\   /\\\\\\n       /      \\\\ /**\\\\\\n      /  /\\\\    /    \\\\        /\\\\    /\\\\  /\\\\      /\\\\            /\\\\/\\\\/\\\\  /\\\\\\n     /  /  \\\\  /      \\\\      /  \\\\/\\\\/  \\\\/  \\\\  /\\\\/  \\\\/\\\\  /\\\\  /\\\\/ / /  \\\\/  \\\\\\n    /  /    \\\\/ /\\\\     \\\\    /    \\\\ \\\\  /    \\\\/ /   /  \\\\/  \\\\/  \\\\  /    \\\\   \\\\\\n   /  /      \\\\/  \\\\/\\\\   \\\\  /      \\\\    /   /    \\\\\\n__/__/_______/___/__\\\\___\\\\__________________________________________________
+use_db jlkdhafglkjdsahglkjashglkdjfhglsdkjfhglkdsjfhgdlskjhgsdlkjfghsldkjfhglkdjfhglkdjfghsldkjfhgldkjfghlkdjhglkdjfghsldkjghslkdfjghsldfkjghsdlkjghdlkjghdlkjghdlkjghsdlkjghdlskjghdlkjghsdlkjghdlskjhgdlkjhgdslkjghdlskjghdslkjghdlkgjhdslkgjhdslkjghdslkgjdhslgkjdshglkjsdhfglkjsdhglkjdhfg
+clear
+help
+use_db default
+exit
+create_db
+set_object 824635441152 "key1", r#"{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}"#
+set_object 824635441152 "key1", '{"type": "car", "uuid": "abc-123", "x": 1.0, "y": 2.0, "z": 3.0}'
+history
+history 10
+exit
+history 10
+greet
+exit
+help
+gxre
+greet
+create_db
+set_object 824635441152
+history 10
+exit
+history 10
+create_db
+set_object 824635441152
+set_object
+history 10
+help
+exit
+help
 exit

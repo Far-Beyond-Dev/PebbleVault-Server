@@ -1,4 +1,4 @@
-use PebbleVault;
+/* use PebbleVault;
 
 pub fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -16,4 +16,4 @@ pub fn main() {
     } else {
         println!("Usage: close_db <database_pointer>");
     }
-}
+}*/

@@ -1,4 +1,4 @@
-use PebbleVault;
+/* use PebbleVault;
 
 pub fn main() {
     let args: Vec<String> = std::env::args().collect();
@@ -7,4 +7,4 @@ pub fn main() {
     let key: &str = &args[2];
     
     PebbleVault::get_object(db, key);
-}
+}*/
