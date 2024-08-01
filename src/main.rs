@@ -34,8 +34,8 @@ __/__/_______/___/__\___\__________________________________________________
 "#;
 
 println!("{}", ascii_art);
-println!("{}", "                          Welcome to PebbleVault CLI 🗿".green().bold());
-println!("{}", "                                  Ver: 0.1.0-A".blue().bold());
+println!("{}", "                        Welcome to PebbleVault CLI 🗿".green().bold());
+println!("{}", "                                Ver: 0.1.0-A".blue().bold());
 
 
     let mut rl = DefaultEditor::new().unwrap();
